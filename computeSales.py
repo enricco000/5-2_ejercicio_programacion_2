@@ -1,7 +1,8 @@
 """
 This script computes the total cost of sales from a sales record file,
 using prices specified in a product list file. It outputs the result to
-both the console and a file named SalesResults.txt, including the execution time.
+both the console and a file named SalesResults.txt,
+including the execution time.
 """
 
 import argparse
@@ -35,7 +36,7 @@ def compute_total_sales(product_list, sales_records):
         if product_name in price_lookup:
             total_cost += price_lookup[product_name] * quantity
         else:
-            print(f"Warning: Product {product_name} not found in product list.")
+            print(f"Warning: Product {product_name} not found in product list")
     return total_cost
 
 
@@ -68,7 +69,7 @@ def main(args_):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='Compute the total sales from sales records using a product list.'
+        description='Compute the total sales.'
     )
     parser.add_argument(
         'product_list', help='Filename of the product list JSON file'
